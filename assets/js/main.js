@@ -4,7 +4,7 @@ let clickCount = 0;
 
 const maxRecords = 1;
 const limit = 1;
-const newLimit = 10;
+const newLimit = 50;
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
@@ -36,7 +36,7 @@ loadPokemonItens(offset, limit);
 
 loadMoreButton.addEventListener("click", () => {
   clickCount++;
-  if (clickCount == 2) {
+  if (clickCount <= 2) {
     document.body.style.height = "100%";
   }
 
